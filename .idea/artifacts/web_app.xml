@@ -6,6 +6,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="javaEE-web-app" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-java-8.0.22" />
+        </element>
       </element>
       <element id="javaee-facet-resources" facet="javaEE-web-app/web/Web" />
     </root>
