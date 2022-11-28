@@ -1,5 +1,9 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="dto.CustomerDTO" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.DriverManager" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.ResultSet" %>
 <%--
   Created by IntelliJ IDEA.
   User: Yasith C Bandara
@@ -24,10 +28,19 @@
 <%
     ArrayList<CustomerDTO> customers = new ArrayList<>();
 
-    customers.add(new CustomerDTO("C001","Sandun","Ratnapura",25000));
-    customers.add(new CustomerDTO("C002","Yasith","Ratnapura",25000));
-    customers.add(new CustomerDTO("C003","Manuka","Polonnaruwa",25000));
-    customers.add(new CustomerDTO("C004","Ishara","Nittabuwa",25000));
+    Class.forName("com.mysql.jdbc.Driver");
+    Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/thogakade", "root", "1234");
+    PreparedStatement pstm = connection.prepareStatement("SELECT * FROM customer");
+    ResultSet rs = pstm.executeQuery();
+
+    while (rs.next()) {
+        customers.add(new CustomerDTO(
+                rs.getString(1),
+                rs.getString(2),
+                rs.getString(3),
+                rs.getDouble(4)
+        ));
+    }
 
 %>
 

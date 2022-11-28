@@ -41,7 +41,8 @@ public class CustomerServlet extends HttpServlet {
             pstm.setDouble(4,cusSalary);
 
             boolean b = pstm.executeUpdate()>0;
-            resp.getWriter().write("<h1>"+b+"</h1>");
+
+            resp.sendRedirect("customer.jsp");
 
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
