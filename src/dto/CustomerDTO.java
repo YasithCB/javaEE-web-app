@@ -6,16 +6,16 @@ package dto;
  * project javaEE-web-app
  */
 
-public class customerDTO {
+public class CustomerDTO {
     private String id;
     private String name;
     private String address;
     private double salary;
 
-    public customerDTO() {
+    public CustomerDTO() {
     }
 
-    public customerDTO(String id, String name, String address, double salary) {
+    public CustomerDTO(String id, String name, String address, double salary) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -56,7 +56,7 @@ public class customerDTO {
 
     @Override
     public String toString() {
-        return "customerDTO{" +
+        return "CustomerDTO{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +

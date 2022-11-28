@@ -1,3 +1,12 @@
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="dto.CustomerDTO" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: Yasith C Bandara
+  Date: 11/28/2022
+  Time: 10:17 PM
+  To change this template use File | Settings | File Templates.
+--%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +22,12 @@
 <body>
 
 <%
+    ArrayList<CustomerDTO> customers = new ArrayList<>();
+
+    customers.add(new CustomerDTO("C001","Sandun","Ratnapura",25000));
+    customers.add(new CustomerDTO("C002","Yasith","Ratnapura",25000));
+    customers.add(new CustomerDTO("C003","Manuka","Polonnaruwa",25000));
+    customers.add(new CustomerDTO("C004","Ishara","Nittabuwa",25000));
 
 %>
 
@@ -153,7 +168,22 @@
                     <th scope="col">Salary</th>
                 </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                    <%
+                        for (CustomerDTO customer : customers) {
+                    %>
+
+                    <tr>
+                        <td><%=customer.getId()%></td>
+                        <td><%=customer.getName()%></td>
+                        <td><%=customer.getAddress()%></td>
+                        <td><%=customer.getSalary()%></td>
+                    </tr>
+
+                    <%
+                        }
+                    %>
+                </tbody>
             </table>
         </div>
         <!--table-->
