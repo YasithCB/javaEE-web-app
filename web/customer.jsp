@@ -1,165 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Customer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- MDB -->
-  <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
-          rel="stylesheet"
-  />
+    <meta charset="UTF-8">
+    <title>Customer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
+            rel="stylesheet"
+    />
 </head>
 <body>
 
+<%
+
+%>
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <!-- Container wrapper -->
-  <div class="container-fluid">
-    <!-- Toggle button -->
-    <button
-            class="navbar-toggler"
-            type="button"
-            data-mdb-toggle="collapse"
-            data-mdb-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- Navbar brand -->
-      <a class="navbar-brand mt-2 mt-lg-0" href="#">
-        <img
-                src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-                height="15"
-                alt="MDB Logo"
-                loading="lazy"
-        />
-      </a>
-      <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Order</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Customer</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Item</a>
-        </li>
-      </ul>
-      <!-- Left links -->
-    </div>
-    <!-- Collapsible wrapper -->
-
-    <!-- Right elements -->
-    <div class="d-flex align-items-center">
-      <!-- Avatar -->
-      <div class="dropdown">
-        <a
-                class="dropdown-toggle d-flex align-items-center hidden-arrow"
-                href="#"
-                id="navbarDropdownMenuAvatar"
-                role="button"
-                data-mdb-toggle="dropdown"
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+        <!-- Toggle button -->
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
                 aria-expanded="false"
+                aria-label="Toggle navigation"
         >
-          <img
-                  src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                  class="rounded-circle"
-                  height="25"
-                  alt="Black and White Portrait of a Man"
-                  loading="lazy"
-          />
-        </a>
-        <ul
-                class="dropdown-menu dropdown-menu-end"
-                aria-labelledby="navbarDropdownMenuAvatar"
-        >
-          <li>
-            <a class="dropdown-item" href="#">My profile</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Settings</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Logout</a>
-          </li>
-        </ul>
-      </div>
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar brand -->
+            <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                <img
+                        src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+                        height="15"
+                        alt="MDB Logo"
+                        loading="lazy"
+                />
+            </a>
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Item</a>
+                </li>
+            </ul>
+            <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+
+        <!-- Right elements -->
+        <div class="d-flex align-items-center">
+            <!-- Avatar -->
+            <div class="dropdown">
+                <a
+                        class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                        href="#"
+                        id="navbarDropdownMenuAvatar"
+                        role="button"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                >
+                    <img
+                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                            class="rounded-circle"
+                            height="25"
+                            alt="Black and White Portrait of a Man"
+                            loading="lazy"
+                    />
+                </a>
+                <ul
+                        class="dropdown-menu dropdown-menu-end"
+                        aria-labelledby="navbarDropdownMenuAvatar"
+                >
+                    <li>
+                        <a class="dropdown-item" href="#">My profile</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Settings</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Right elements -->
     </div>
-    <!-- Right elements -->
-  </div>
-  <!-- Container wrapper -->
+    <!-- Container wrapper -->
 </nav>
 <!-- Navbar -->
 
 <main class="container mt-5">
 
-  <h3 class="fw-bold">Add Customer</h3>
+    <h3 class="fw-bold">Add Customer</h3>
 
-  <section class="row">
-    <!--form-->
-    <form class="col-5 mt-3" action="customer" method="post">
-      <!-- 2 column grid layout with text inputs for the first and last names -->
-      <div class="row mb-4">
-        <div class="col">
-          <div class="form-outline">
-            <input type="text" id="form3Example1" name="cusId" class="form-control" />
-            <label class="form-label" for="form3Example1">Customer ID</label>
-          </div>
+    <section class="row">
+        <!--form-->
+        <form class="col-5 mt-3" action="customer" method="post">
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="form-outline">
+                        <input type="text" id="form3Example1" name="cusId" class="form-control" />
+                        <label class="form-label" for="form3Example1">Customer ID</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-outline">
+                        <input type="text" id="form3Example2" name="cusName" class="form-control" />
+                        <label class="form-label" for="form3Example2">Name</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- address input -->
+            <div class="form-outline mb-4">
+                <input type="text" id="form3Example3" name="cusAddress" class="form-control" />
+                <label class="form-label" for="form3Example3">Address</label>
+            </div>
+
+            <!-- salary input -->
+            <div class="form-outline mb-4">
+                <input type="number" id="form3Example4" name="cusSalary" class="form-control" />
+                <label class="form-label" for="form3Example4">Salary</label>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4">Save</button>
+        </form>
+        <!--form-->
+
+        <!--table-->
+        <div class="col-6">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Salary</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
         </div>
-        <div class="col">
-          <div class="form-outline">
-            <input type="text" id="form3Example2" name="cusName" class="form-control" />
-            <label class="form-label" for="form3Example2">Name</label>
-          </div>
-        </div>
-      </div>
+        <!--table-->
+    </section>
 
-      <!-- address input -->
-      <div class="form-outline mb-4">
-        <input type="text" id="form3Example3" name="cusAddress" class="form-control" />
-        <label class="form-label" for="form3Example3">Address</label>
-      </div>
-
-      <!-- salary input -->
-      <div class="form-outline mb-4">
-        <input type="number" id="form3Example4" name="cusSalary" class="form-control" />
-        <label class="form-label" for="form3Example4">Salary</label>
-      </div>
-
-      <!-- Submit button -->
-      <button type="submit" class="btn btn-primary btn-block mb-4">Save</button>
-    </form>
-    <!--form-->
-
-    <!--table-->
-    <div class="col-6">
-      <table class="table">
-        <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Name</th>
-          <th scope="col">Address</th>
-          <th scope="col">Salary</th>
-        </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+    <div class="row col-5 gap-2">
+        <button type="button" class="btn btn-danger col-3">Remove</button>
+        <button type="button" class="btn btn-warning col-4">Update</button>
+        <button type="button" class="btn btn-info col-4">Get All</button>
     </div>
-    <!--table-->
-  </section>
-
-  <div class="row col-5 gap-2">
-    <button type="button" class="btn btn-danger col-3">Remove</button>
-    <button type="button" class="btn btn-warning col-4">Update</button>
-    <button type="button" class="btn btn-info col-4">Get All</button>
-  </div>
 
 </main>
 
